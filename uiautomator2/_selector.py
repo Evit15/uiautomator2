@@ -4,7 +4,7 @@ import warnings
 
 import requests
 import six
-from PIL import Image
+#from PIL import Image
 from retry import retry
 
 from .exceptions import UiObjectNotFoundError
@@ -129,9 +129,9 @@ class UiObject(object):
         '''ui object info.'''
         return self.jsonrpc.objInfo(self.selector)
     
-    def screenshot(self) -> Image.Image:
-        im = self.session.screenshot()
-        return im.crop(self.bounds())
+    # def screenshot(self) -> Image.Image:
+    #     im = self.session.screenshot()
+    #     return im.crop(self.bounds())
 
     def click(self, timeout=None, offset=None):
         """

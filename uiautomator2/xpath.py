@@ -18,7 +18,7 @@ from typing import Callable, Optional, Union
 import adbutils
 from deprecated import deprecated
 from logzero import logger, setup_logger
-from PIL import Image
+#from PIL import Image
 
 import uiautomator2
 
@@ -217,8 +217,8 @@ class XPath(object):
         if text:
             self._d.send_keys(text)
 
-    def take_screenshot(self) -> Image.Image:
-        return self._d.screenshot()
+    # def take_screenshot(self) -> Image.Image:
+    #     return self._d.screenshot()
 
     def match(self, xpath, source=None):
         return len(self(xpath, source).all()) > 0
@@ -611,10 +611,10 @@ class XPathSelector(object):
         """ find element and perform long click """
         self.get().long_click()
 
-    def screenshot(self) -> Image.Image:
-        """ take element screenshot """
-        el = self.get()
-        return el.screenshot()
+    # def screenshot(self) -> Image.Image:
+    #     """ take element screenshot """
+    #     el = self.get()
+    #     return el.screenshot()
 
     def __getattr__(self, key: str):
         """

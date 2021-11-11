@@ -113,3 +113,7 @@ vendor/
 docs/*.rst
 
 .DS_Store
+
+bin
+pyvenv.cfg
+a.py

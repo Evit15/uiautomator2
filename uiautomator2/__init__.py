@@ -46,7 +46,7 @@ import six.moves.urllib.parse as urlparse
 from cached_property import cached_property
 from deprecated import deprecated
 from logzero import setup_logger
-from PIL import Image
+#from PIL import Image
 from retry import retry
 from urllib3.util.retry import Retry
 
